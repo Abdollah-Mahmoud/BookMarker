@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7eddf;
+}
+
+#bookmaker .title {
+  font-family: Pacifico, cursive;
+  font-size: 50px;
+  font-weight: 500;
+  color: rgb(53, 46, 40);
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 45px;
+}
+
+#bookmaker .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  background-color: orange;
+  z-index: -1;
+  transform: translateY(50%);
+  transition: transform 0.5s ease;
+}
+
+#bookmaker .title:hover::before {
+  transform: translateY(0);
+}
+
+#bookmaker .my-green {
+  color: rgb(16, 176, 16);
+  font-family: Righteous, cursive;
+  font-size: 25px;
+  background: linear-gradient(to right, darkgreen, lightgreen);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#form .my-button {
+  padding-left: 50px;
+  font-size: 17px;
+}
+
+#form .bottom-dots {
+  margin-top: -20px;
+}
+
+.inputs {
+  font-size: 16px;
+  padding: 15px;
+}
+
+.form-control:focus {
+  border-color: rgb(255, 187, 0);
+  box-shadow: 0 0 5px rgb(255, 187, 0);
+}
+
+.error-input {
+  border-color: red;
+  box-shadow: 0 0 5px red;
+}
+
+.success-input {
+  border-color: green;
+  box-shadow: 0 0 5px green;
+}
+
+.visit-btn {
+  color: white;
+  text-decoration: none;
+}
+
+.header,
+.row-data {
+  border-bottom: 1px solid rgb(211, 206, 206);
+}
+
+.name {
+  width: 250px;
+  text-align: center;
+}
+
+.index-row {
+  width: 80px;
+  text-align: center;
+}
+
+.alert {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  padding-top: 60px;
+}
+
+.alert-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+  height: 230px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  padding-left: 350px;
+  margin-top: -5px;
+  
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.alert-data {
+  padding: 30px;
+}
+
+@media (max-width: 576px) {
+  .header .col-8 {
+    width: 40%; 
+    text-align: center;  
+  }
+
+  #rowData .col-8 {
+    width: 40%;
+    text-align: center;
+  }
+  
+  
+  #myAlert .col-8 {
+    width: 40%;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <section id="bookmaker">
+      <h1 class="text-center title">Bookmarker</h1>
+      <p class="text-center">
+        ......................................................................................................................................................................................................................................................................................................................................................................................
+      </p>
+      <h2 class="my-green text-center pt-2">
+        <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+    </section>
+    <section id="form">
+      <div class="container">
+        <div class="inputs">
+          <p class="fw-bold"><i class="fa-solid fa-book"></i> Site Name</p>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="BookName"
+              placeholder="Bookmark Name"
+              oninput="validationSiteName()"
+            />
+          </div>
+          <p class="fw-bold"><i class="fa-solid fa-paperclip"></i> Site URL</p>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="WebsiteURL"
+              placeholder="Website URL"
+              oninput="validationSiteUrl()"
+            />
+          </div>
+          <button
+            style="width: 150px"
+            onclick="addSite()"
+            id="submit"
+            class="btn btn-danger d-flex mx-auto my-4 my-button"
+          >
+            Submit
+          </button>
+          <p class="bottom-dots">
+            ......................................................................................................................................................................................................................................................................................................................................................................................
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="bottom-half">
+      <div class="container bg-light p-2">
+        <div class="row header py-2">
+          <div class="d-flex justify-content-between px-5">
+            <span class="fw-bold">Index</span>
+            <span class="fw-bold">Website Name</span>
+            <span class="fw-bold">Visit</span>
+            <span class="fw-bold">Delete</span>
+          </div>
+        </div>
+        <div id="rowData" class="row"></div>
+      </div>
+      <div id="myAlert" class="alert">
+        <div class="alert-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 d-flex">
+                <i class="fa-solid fa-circle px-1" style="color: red"></i>
+                <i class="fa-solid fa-circle px-1" style="color: orange"></i>
+                <i class="fa-solid fa-circle px-1" style="color: green"></i>
+                <span class="close d-flex" onclick="closeAlert()"><i class="fa-solid fa-xmark"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="alert-data">
+            <p>
+              <b
+                >Site Name or Url is not valid, Please follow the rules
+                below:</b
+              >
+            </p>
+            <p>
+              <i class="fa-solid fa-circle-arrow-right" style="color: red"></i>
+              Site name must contain at least 3 characters
+            </p>
+            <p>
+              <i class="fa-solid fa-circle-arrow-right" style="color: red"></i>
+              Site URL must be a valid one
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>
